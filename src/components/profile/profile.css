@@ -1,0 +1,480 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 100vh;
+  padding: 45px;
+  width: 100%;
+  position: absolute;
+}
+a {
+  text-decoration: none;
+}
+.empty-container {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  width: 70%;
+  justify-content: center;
+}
+
+.profile-card {
+  display: flex;
+  padding: 25px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.profile-card > img {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  border: 1px solid #cbd5e1;
+  object-fit: cover;
+}
+.info-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.info-profile > h2 {
+  font-weight: 700;
+}
+
+.info-profile > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.profile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  background-color: #f8fafc;
+  width: 70%;
+  margin-bottom: 10px;
+  border-top: 1px solid #cbd5e1;
+  height: 5vh;
+}
+.profile-nav > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.profile-nav .active {
+  border-top: 2px solid #475569;
+}
+
+#dark .profile-nav .active {
+  border-top: 2px solid white;
+}
+
+.posts-container {
+  display: grid;
+  width: 70%;
+  margin-top: 40px;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: 350px;
+  gap: 25px;
+}
+.posts-container > a {
+  width: 100%;
+  height: 350px;
+  padding: 0;
+}
+
+.profile-post-image {
+  position: relative;
+}
+.profile-post-image > span {
+  width: 100%;
+}
+.profile-post-image > span > img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border: 1px solid #f5f5f4;
+}
+.video-details {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border: 1px solid #f5f5f4;
+}
+
+.posts-container .active {
+  border-top: 2 px solid black;
+}
+
+.info-followers {
+  text-align: center;
+  cursor: pointer;
+}
+.info-followers > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-followers > div svg {
+  width: 28px;
+  height: 28px;
+}
+
+.users-container-list {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-list-content > :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid grey;
+  z-index: 1500;
+}
+
+.users-list-content > :nth-child(1) > :nth-child(2) {
+  cursor: pointer;
+}
+
+.users-list-content {
+  width: 90%;
+  background-color: white;
+  color: black;
+  z-index: 1000;
+  border-radius: 12px;
+  max-height: 45%;
+  overflow-y: auto;
+}
+
+.users-container-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.users-list-content {
+  width: 25%;
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 25px;
+  margin-left: 10%;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  gap: 15px;
+}
+
+.edit-form > div {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.edit-form > div > input {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+#dark .edit-form > div > input {
+  background-color: black;
+  color: white;
+}
+
+#dark .edit-form > div > input {
+  border-color: white;
+}
+
+.image-overlay {
+  display: none;
+}
+
+.image-overlay.show-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(6px);
+  color: white;
+  z-index: 10;
+}
+
+.image-overlay.show-overlay > h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image > img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #cbd5e1;
+  object-fit: cover;
+}
+.profile-image > div > :nth-child(2) {
+  color: #22d3ee;
+  cursor: pointer;
+}
+.profile-image > div > :nth-child(2):hover {
+  color: #312e81;
+}
+
+.change-photo {
+  display: none;
+}
+
+.change-photo.active {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.change-photo.active > div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+  align-items: center;
+  background-color: #f4f4f5;
+  color: black;
+  font-weight: 900;
+  width: 30%;
+  z-index: 10000;
+}
+
+.change-photo.active > div > * {
+  padding: 25px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.change-photo.active > div > *:hover {
+  background-color: #c084fc;
+}
+
+#dark .change-photo.active > div > *:hover {
+  background-color: #312e81;
+}
+
+#dark .change-photo.active > div {
+  background-color: black;
+  color: white;
+}
+.profile-container .spinner-container {
+  position: absolute;
+  align-items: center;
+  top: 45%;
+  width: 65%;
+}
+
+.empty-state {
+  display: flex;
+  margin-top: 15%;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20%;
+}
+.empty-state > svg {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  padding: 15px;
+  border: 4px solid black;
+}
+
+#dark .empty-state > svg {
+  border-color: white;
+}
+.empty-state > h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+#dark .profile-container .users-list-content {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1150px) {
+  .users-list-content {
+    width: 40%;
+  }
+  .edit-form > div {
+    width: 100%;
+  }
+  .edit-form {
+    width: 40%;
+  }
+  .posts-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .profile-container .users-container-profile > a > div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .profile-container .users-container-profile > button {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .profile-container {
+    display: flex;
+    align-items: center;
+    padding: 120px 0 0 0;
+    width: 100%;
+  }
+
+  .profile-card {
+    width: 100%;
+    gap: 35px;
+  }
+  .info-followers {
+    width: 100%;
+    height: 100%;
+  }
+
+  .users-list-content {
+    width: 60%;
+  }
+
+  .users-container-profile > button {
+    font-size: 0.9rem;
+  }
+
+  .edit-container {
+    margin-left: 0;
+  }
+  .edit-form {
+    width: 70%;
+  }
+  .posts-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 90%;
+    padding-bottom: 100px;
+  }
+
+  .profile-container .spinner-container {
+    top: 75%;
+  }
+  .profile-nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-card {
+    padding: 15px;
+    margin-top: 20%;
+    gap: 25px;
+    justify-content: space-around;
+  }
+  .profile-container {
+    padding-top: 60px;
+  }
+  .profile-nav {
+    width: 100%;
+  }
+
+  .info-followers {
+    flex-direction: column;
+  }
+  .info-followers > div {
+    flex-direction: row;
+  }
+
+  .posts-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .users-list-content {
+    width: 90%;
+  }
+
+  .users-container-profile > button {
+    font-size: 0.7rem;
+  }
+  .edit-form > div {
+    flex-direction: column;
+  }
+  .profile-container .spinner-container {
+    top: 95%;
+  }
+}
+
+@media (max-width: 350px) {
+  .posts-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .users-container-profile {
+    font-size: 0.9rem;
+  }
+  .users-container-profile > a > div > img {
+    width: 42px;
+    height: 42px;
+  }
+}

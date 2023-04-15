@@ -1,0 +1,109 @@
+:root {
+  --card_width: 300px;
+  --row_increment: 100px;
+  --card_border_radius: 16px;
+  --card_small: 26;
+  --card_med: 33;
+  --card_large: 42;
+}
+
+.explore-container {
+  padding: 0;
+  margin-left: 12%;
+  gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card_width));
+  grid-auto-rows: var(10px);
+  min-height: 100vh;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.card-explore {
+  padding: 0;
+  margin: 15px 10px;
+  cursor: pointer;
+
+  border-radius: var(--card_border_radius);
+}
+.card-explore:hover {
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+
+.card-explore > a > img {
+  object-fit: cover;
+  height: 100%;
+  border-radius: var(--card_border_radius);
+  max-width: 100%;
+}
+.explore-video {
+  object-fit: cover;
+  height: 100%;
+  border-radius: var(--card_border_radius);
+  max-width: 100%;
+}
+
+.card_small {
+  grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+  grid-row-end: span var(--card_med);
+}
+
+.card_large {
+  grid-row-end: span var(--card_large);
+}
+@media (max-width: 1510px) {
+  .explore-container {
+    margin-left: 13%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .explore-container {
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, 225px);
+    justify-content: center;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 880px) {
+  .explore-container {
+    padding: 18px;
+    grid-template-columns: repeat(auto-fill, 180px);
+    justify-content: center;
+    margin-left: 16%;
+  }
+}
+
+@media (max-width: 750px) {
+  .explore-container {
+    width: 100%;
+    margin-left: 0;
+    padding: 100px 0 40px 0;
+    grid-template-columns: repeat(auto-fill, 250px);
+    height: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .explore-container {
+    grid-template-columns: repeat(auto-fill, 250px);
+  }
+}
+
+@media (max-width: 450px) {
+  .explore-container {
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+  .card-explore > a > img {
+    height: 85%;
+  }
+  .card-explore {
+    margin: 0px 6px;
+  }
+}

@@ -1,0 +1,271 @@
+.post-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 10000;
+}
+
+.post-details > svg {
+  position: absolute;
+  cursor: pointer;
+}
+.left-arrow {
+  top: 10px;
+  left: 25px;
+  width: 48px;
+  height: 38px;
+  fill: white;
+}
+.right-arrow {
+  top: 10px;
+  right: 25px;
+  width: 48px;
+  height: 38px;
+  fill: white;
+}
+
+.details-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+  background-color: white;
+}
+.details-info-section > * {
+  padding: 8px 12px;
+}
+#dark .details-info-section {
+  background-color: black;
+  border: 1px solid white;
+}
+
+.post-details > * {
+  z-index: 10000;
+  height: 85vh;
+  flex: 0 0 auto;
+}
+
+.user-section-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+.user-section-details > img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.details-images-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 15px 0px;
+  background-color: black;
+}
+.details-images-section > div > img {
+  height: 82vh;
+  width: 100%;
+}
+
+#dark .details-images-section {
+  border: 1px solid white;
+}
+
+.back-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 12px;
+  top: 10px;
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+}
+.caption-comments {
+  overflow-y: auto;
+  flex: 1;
+}
+.comment-form {
+  width: 100%;
+}
+
+.caption-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.caption-section > a {
+  padding: 0;
+}
+
+.caption-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.caption-info > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.likes-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.buttons-section-details {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+#dark .buttons-section > :nth-child(3) .active {
+  fill: white;
+}
+#light .buttons-section > :nth-child(3) .active {
+  fill: black;
+}
+
+#dark .buttons-section-details > :nth-child(3).active {
+  fill: white;
+}
+#light .buttons-section-details > :nth-child(3).active {
+  fill: black;
+}
+
+#light .buttons-section-details > :nth-child(3) {
+  fill: white;
+}
+
+.buttons-section-details > :nth-child(2) {
+  flex: 1;
+}
+
+.buttons-section-details .loading-spinner {
+  width: 32px;
+  height: 32px;
+}
+.commments-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.comments-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comments-info > div > a {
+  padding: 0;
+}
+.comments-info > div > a > div > img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.comments-info > svg {
+  align-self: flex-start;
+}
+.comments-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comments-info .loading-spinner {
+  width: 32px;
+  height: 32px;
+}
+.comment {
+  display: flex;
+  gap: 10px;
+}
+.comment > button {
+  cursor: pointer;
+}
+
+.comment-card-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.comment-card-info > svg {
+  cursor: pointer;
+}
+
+.edit-comment-input {
+  border: 1px solid black;
+  padding: 5px 5px;
+  border-radius: 8px;
+  color: black;
+}
+.post-details-spinner {
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
+@media (max-width: 920px) {
+  .post-details > * {
+    height: 65vh;
+  }
+  .details-images-section {
+    width: 50%;
+  }
+  .details-info-section {
+    width: 45%;
+    margin-left: 2px;
+  }
+  .details-images-section > div > img {
+    height: 62vh;
+  }
+  .post-details-spinner {
+    margin-top: 60%;
+  }
+  .post-details > svg {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .post-details-spinner {
+    margin-right: 20%;
+  }
+}
+
+@media (max-width: 620px) {
+  .post-details {
+    justify-content: flex-start;
+  }
+  .post-details > * {
+    height: 90vh;
+    flex: 0 0 auto;
+  }
+  .details-images-section {
+    display: none;
+  }
+  .details-info-section {
+    width: 100%;
+    margin-left: 2px;
+  }
+  .post-details-spinner {
+    margin-top: 80%;
+    margin-right: 20%;
+  }
+}
